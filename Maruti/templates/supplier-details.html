@@ -1,0 +1,62 @@
+{% extends 'index.html'%}
+    {% block content %}
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0">Party Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        
+                        <div class="row" >
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                       
+                                        
+                                        <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'supplier-add' %}" style="color: white;"><i class="bx bx-add-to-queue"></i>&nbsp;&nbsp;Add</a></button>
+        
+                                        <div class="table-rep-plugin">
+                                            <div class="table-responsive mb-0" data-pattern="priority-columns">
+                                                <table id="tech-companies-1" class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Sr No</th>
+                                                        <th>Party Name</th>
+                                                        <th>GST No</th>
+                                                        <th data-priority="7">Area</th>
+                                                        <th data-priority="10">Party type</th>
+                                                        <th>Mobile No</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for obj in party_list %}
+                                                    <tr>
+                                                        <td>{{forloop.counter}}</td>
+                                                        <th>{{obj.party_name }}</th>
+                                                        <td>{{obj.GST_No }}</td>
+                                                        <td>{{ obj.area }}</td>
+                                                        <td>{{ obj.party_type }}</td>
+                                                        <td>{{ obj.mobile_no }}</td>
+                                                    </tr>
+                                                   {% endfor %}
+
+                                                   
+                                                    </tbody>
+                                                </table>
+                                            </div>
+        
+                                        </div>
+        
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                    </div> <!-- container-fluid -->
+                </div>
+            {%endblock content %}

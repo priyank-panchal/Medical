@@ -1,0 +1,71 @@
+{% extends 'index.html'%}
+    {% block content %}
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0">Purchase Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        
+                        <div class="row" >
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                       
+                                        
+                                        <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'purchase-add' %}" style="color: white;"><i class="bx bx-add-to-queue"></i>&nbsp;&nbsp;Add</a></button>
+        
+                                        <div class="table-rep-plugin">
+                                            <div class="table-responsive mb-0" data-pattern="priority-columns">
+                                                <table id="tech-companies-1" class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>NO.</th>
+                                                        <th data-priority="7">BILL NO.</th>
+                                                        <th data-priority="10">PARTY NAME</th>
+                                                        <th data-priority="10">CREDIT</th>
+                                                        <th data-priority="10">DEBIT</th>
+                                                        <th data-priority="10">DATE</th>
+                                                        <th data-priority="10">PRODUCT ADD</th>
+                                                        <th data-priority="10">PRODUCT DETAIL</th>                                                        
+                                                        
+                                                        
+                                                        
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for obj in all_purchase %}
+                                                        <tr>
+                                                            <td>{{ forloop.counter }}</td>
+                                                            <th>{{ obj.Bill_no }}</th>
+                                                            <td>{{ obj.party }}</td>
+                                                            <td>{{ obj.credit }}</td>
+                                                            <td>{{ obj.debit }}</td>
+                                                            <td>{{ obj.date_pur }}</td>
+                                                            <td><a  href="{% url 'stock_add' obj.Pur_id %}" class="btn btn-success" >Add</a></td>
+                                                            <td><a href="{% url 'stock_master' %}" class = "btn btn-success">Details</a></td>
+                                                            
+                                                        </tr>
+                                                    {% endfor %}
+                                                     
+                                                       
+                                                   
+                                                    </tbody>
+                                                </table>
+                                            </div>
+        
+                                        </div>
+        
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                    </div> <!-- container-fluid -->
+                </div>
+            {%endblock content %}

@@ -1,0 +1,67 @@
+{% extends 'index.html'%}
+    {% block content %}
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0">Employee Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        
+                        <div class="row" >
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                       
+                                        
+                                        <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'employee_add' %}" style="color: white;"><i class="bx bx-add-to-queue"></i>&nbsp;&nbsp;Add</a></button>
+        
+                                        <div class="table-rep-plugin">
+                                            <div class="table-responsive mb-0" data-pattern="priority-columns">
+                                                <table id="tech-companies-1" class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Sr No.</th>
+                                                        <th>Employee Name</th>
+                                                        <th data-priority="7">MOBILE NO </th>
+                                                        <th data-priority="10">ADDRESS</th>
+                                                        
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                 
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <th>MSFT <span class="co-name">Microsoft Corporation</span></th>
+                                                        <td>Bapunagar Ahmedabad</td>
+                                                        <td>24AAAHDGSFSASDASASASAS21</td>
+                                                       
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <th>MSFT <span class="co-name">Microsoft Corporation</span></th>
+                                                        <td>Bapunagar Ahmedabad</td>
+                                                        <td>24AAAHDGSFSASDASASASAS21</td>
+                                                        
+                                                        
+                                                    </tr>
+                                                   
+                                                    </tbody>
+                                                </table>
+                                            </div>
+        
+                                        </div>
+        
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                    </div> <!-- container-fluid -->
+                </div>
+            {%endblock content %}

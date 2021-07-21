@@ -1,0 +1,55 @@
+{% extends 'index.html'%}
+    {% block content %}
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0">Product Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        
+                        <div class="row" >
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                       
+                                        
+                                        <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'product_add' %}" style="color: white;"><i class="bx bx-add-to-queue"></i>&nbsp;&nbsp;Add</a></button>
+        
+                                        <div class="table-rep-plugin">
+                                            <div class="table-responsive mb-0" data-pattern="priority-columns">
+                                                <table id="tech-companies-1" class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Sr No</th>
+                                                        <th>Product Name</th>
+                                                        <th>MRP</th>
+                                                    </tr>
+                                                    </thead>
+
+                                                    {% for Details in product_list %}
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>{{ forloop.counter }}</td>
+                                                        <td>{{ Details.pro_name }}</td>
+                                                        <td>{{ Details.MRP }}</td>
+                                                    </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+        
+                                        </div>
+        
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                    </div> <!-- container-fluid -->
+                </div>
+            {%endblock content %}

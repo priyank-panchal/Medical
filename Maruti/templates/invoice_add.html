@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="page-content">
+    <div class="container-fluid">
+<div class="row" ">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title">ADD NEW INVOICE </h4>
+                <p &nbsp;></p>
+
+                <div class="mb-3 row">
+
+                    <label for="example-text-input" class="col-md-2 col-form-label">PARTY NAME</label>
+                 <div class="col-md-10">
+                    <select class="form-control dropdown-item" style="border: 1px solid #d2d2e4;padding: 8px;">
+                        <option value="select" selected>--Select--</option>
+                        <option value="1">1</option>
+                        <option value="2">33</option>
+                    </select>
+                 </div>
+            
+                   
+                </div>
+            
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">CREDIT</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number" value="" id="example-number-input">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">DEBIT</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number" value="" id="example-number-input">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">DATE</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="datetime-local" value="2019-08-19T13:45:00" id="example-datetime-local-input">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">INVOICE NO</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number" value="" id="example-number-input">
+                    </div>
+                </div>
+                
+                <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'purchase-add' %}" style="color: white;"><i class="bx bx-check-circle"></i>&nbsp;&nbsp;SUBMIT</a></button>
+                <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'purchase-add' %}" style="color: white;"><i class="bx bx-undo"></i>&nbsp;&nbsp;BACK</a></button>
+
+               
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+</div>
+</div>
+{%endblock content %}

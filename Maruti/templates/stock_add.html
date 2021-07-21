@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="page-content">
+    <div class="container-fluid">
+<div class="row" ">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title">ADD NEW STOCK</h4>
+                <p &nbsp;></p>
+                <form action="" method="POST">
+                    {% csrf_token  %}
+                <div class="mb-3 row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">PRODUCT  NAME</label>
+                 <div class="col-md-10">
+                    <select class="form-control dropdown-item" style="border: 1px solid #d2d2e4;padding: 8px;" name ="pro">
+                        <option value="select" selected>--Select--</option>
+                        {% for obj in all_product %}
+                        <option value="{{ obj.pro_id }}">{{ obj.pro_name }}</option>
+                        {% endfor %}
+                    </select>
+                 </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">SALES RATE</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number"  name ="salse_rate" id="example-number-input">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">PURCHASE RATE</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number"  name="purchase_rate" id="example-number-input">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">OFFER RATE</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number" name="offer_rate" id="example-number-input">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">QTY</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number" name="quantity" id="example-number-input">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">MIN QTY</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number" name="min_quantity" id="example-number-input">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">OFFER QTY</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number" name="offer_qty"  id="example-number-input">
+
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success" style="margin-bottom: 20px;"><i class="bx bx-check-circle"></i>&nbsp;&nbsp SUBMIT</button>
+                <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><i class="bx bx-undo"></i>&nbsp;&nbsp;BACK</a></button>
+
+                </form>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+</div>
+</div>
+{%endblock content %}

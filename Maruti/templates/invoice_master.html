@@ -1,0 +1,69 @@
+{% extends 'index.html'%}
+    {% block content %}
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0">Invoice Details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                        
+                        <div class="row" >
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                       
+                                        
+                                        <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'invoice_add' %}" style="color: white;"><i class="bx bx-add-to-queue"></i>&nbsp;&nbsp;Add</a></button>
+        
+                                        <div class="table-rep-plugin">
+                                            <div class="table-responsive mb-0" data-pattern="priority-columns">
+                                                <table id="tech-companies-1" class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Sr No</th>
+                                                        <th>Party Name.</th>
+                                                        <th>CREDIT</th>
+                                                        <th data-priority="7">DEBIT</th>
+                                                        <th data-priority="10">DATE</th>
+                                                        <th data-priority="10">INVOICE NO</th>
+                                                        <th data-priority="10">ADD SALES</th>
+                                                        <th data-priority="10">SALES DETAILS</th>
+
+                                                        
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                 
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <th>MSFT <span class="co-name">Microsoft Corporation</span></th>
+                                                        <td>Bapunagar Ahmedabad</td>
+                                                        <td>24AAAHDGSFSASDASASASAS21</td>
+                                                        <td>24AAAHDGSFSASDASASASAS21</td>
+                                                        <td>1</td>
+                                                        <td><a  href="{% url 'sales_add' %}" class="btn btn-success">Add</a></td>
+                                                        <td><a href="{% url 'sales_details' %}" class = "btn btn-success">Details</a></td>
+                                                       
+                                                        
+                                                    </tr>
+                                                   
+                                                   
+                                                    </tbody>
+                                                </table>
+                                            </div>
+        
+                                        </div>
+        
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                    </div> <!-- container-fluid -->
+                </div>
+            {%endblock content %}

@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="page-content">
+    <div class="container-fluid">
+<div class="row" ">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title">ADD NEW EMPLOYEE</h4>
+                <p &nbsp;></p>
+
+                <div class="mb-3 row">
+                   
+
+                    <label for="example-text-input" class="col-md-2 col-form-label">EMPLOYEE NAME</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="" id="example-text-input">
+                    </div>
+                   
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">MOBILE NO</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number" value="" id="example-number-input">
+                    </div>
+                </div>
+            
+               
+                
+               
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">ADDRESS</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number" value="" id="example-number-input">
+                    </div>
+                </div>
+                
+                
+                <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'purchase-add' %}" style="color: white;"><i class="bx bx-check-circle"></i>&nbsp;&nbsp;SUBMIT</a></button>
+                <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'purchase-add' %}" style="color: white;"><i class="bx bx-undo"></i>&nbsp;&nbsp;BACK</a></button>
+
+               
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+</div>
+</div>
+{%endblock content %}

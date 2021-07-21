@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="page-content">
+    <div class="container-fluid">
+<div class="row" ">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title">ADD NEW PARTY </h4>
+                <p &nbsp;></p>
+                <form action="" method="post" >
+                    {% csrf_token %}
+                <div class="mb-3 row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">PARTY NAME</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text"  id="example-text-input" name="party_name">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-search-input" class="col-md-2 col-form-label">GST NO </label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text"  id="example-text-input" name = "GST_No">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">Mobile No</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="number" name ="mobile_no" id="example-number-input">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="example-url-input" class="col-md-2 col-form-label">AREA</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" name ="area" id="example-text-input">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+
+                    <label for="example-text-input" class="col-md-2 col-form-label">PARTY TYPE</label>
+                 <div class="col-md-10">
+                    <select class="form-control dropdown-item" style="border: 1px solid #d2d2e4;padding: 8px;" name="party_type">
+                        <option value="select" selected>--Select--</option>
+                        <option value="Saller">Saller</option>
+                        <option value="Buyer">Buyer</option>
+                    </select>
+                 </div>
+
+                   
+                </div>
+                
+                <button type="submit" class="btn btn-success" style="margin-bottom: 20px;"><i class="bx bx-check-circle"></i>&nbsp;&nbsp;SUBMIT</a></button>
+                <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'purchase-add' %}" style="color: white;"><i class="bx bx-undo"></i>&nbsp;&nbsp;BACK</a></button>
+
+                </form>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+</div>
+</div>
+{%endblock content %}

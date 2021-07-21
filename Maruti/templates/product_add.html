@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="page-content">
+    <div class="container-fluid">
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">ADD NEW PRODUCT HERE</h4>
+                <p &nbsp;></p>
+                <form action="/product_add" method="POST">
+                    {% csrf_token %}
+                <div class="mb-3 row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">PRODUCT NAME</label>
+                    <div class="col-md-10">
+                        <input class="form-control" name ="pro_name" type="text"  id="example-text-input" data-required="true" >
+                    </div>
+                </div>
+                 <div class="mb-3 row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">PRODUCT MRP</label>
+                    <div class="col-md-10">
+                        <input class="form-control" name ="MRP" type="number" value="" id="example-number-input" data-required="true" data-type="number">
+                    </div>
+                </div>
+                
+                
+                <button type="submit" class="btn btn-success" style="margin-bottom: 20px;"><i class="bx bx-check-circle"></i>&nbsp;&nbsp;SUBMIT</button>
+                <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'purchase-add' %}" style="color: white;"><i class="bx bx-undo"></i>&nbsp;&nbsp;BACK</a></button>
+                </form>
+               
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+</div>
+</div>
+{%endblock content %}
