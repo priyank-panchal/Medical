@@ -6,7 +6,6 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-
                 <h4 class="card-title">ADD NEW PURCHASE </h4>
                 <p &nbsp;></p>
                 <form action="" method="post">
@@ -17,7 +16,7 @@
                     <select class="form-control dropdown-item" style="border: 1px solid #d2d2e4;padding: 8px;" name="party">
                         <option value="select" selected>--Select--</option>
                         {% for i in all_party %}
-                        <option value ="{{i.pro_id}}">{{i.pro_name}}</option>
+                        <option value ="{{i.party_id}}">{{i.party_name}}</option>
                         {% endfor %}
                     </select>
                  </div>
@@ -26,19 +25,6 @@
                     <label  class="col-md-2 col-form-label">BILL NO</label>
                     <div class="col-md-10">
                         <input class="form-control" type="number"  id="example-number-input" name="Bill_no">
-                    </div>
-                </div>
-
-                <div class="mb-3 row">
-                    <label for="example-url-input" class="col-md-2 col-form-label">CREDIT</label>
-                    <div class="col-md-10">
-                        <input class="form-control" type="number"  id="example-number-input" name="credit">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="example-url-input" class="col-md-2 col-form-label">DEBIT</label>
-                    <div class="col-md-10">
-                        <input class="form-control" type="number"  id="example-number-input" name="Debit">
                     </div>
                 </div>
                 <div class="mb-3 row">

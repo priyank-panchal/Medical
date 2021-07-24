@@ -2,12 +2,11 @@
 {% block content %}
 <div class="page-content">
     <div class="container-fluid">
-<div class="row" ">
+<div class="row" >
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-
-                <h4 class="card-title">ADD NEW STOCK</h4>
+                <h4 class="card-title" >ADD NEW STOCK</h4>
                 <p &nbsp;></p>
                 <form action="" method="POST">
                     {% csrf_token  %}
@@ -56,7 +55,6 @@
                     <label for="example-url-input" class="col-md-2 col-form-label">OFFER QTY</label>
                     <div class="col-md-10">
                         <input class="form-control" type="number" name="offer_qty"  id="example-number-input">
-
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success" style="margin-bottom: 20px;"><i class="bx bx-check-circle"></i>&nbsp;&nbsp SUBMIT</button>

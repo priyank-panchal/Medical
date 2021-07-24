@@ -26,9 +26,9 @@
                                                 <table id="tech-companies-1" class="table">
                                                     <thead>
                                                     <tr>
+
                                                         <th>NO.</th>
                                                         <th data-priority="7">PRODUCT NAME</th>
-                                                       
                                                         <th data-priority="10">MRP</th>
                                                         <th data-priority="10">SALES RATE</th>
                                                         <th data-priority="10">PURCHASE RATE</th>
@@ -41,23 +41,19 @@
                                                     </tr>
                                                     </thead>
                                                     <tbody>
-                                                 
+                                                        {% for obj in stock_details %}
                                                         <tr>
-                                                            <td>1</td>
-                                                            <th>21</th>
-                                                            <td>VICKS</td>
-                                                            <td>MAHAVIR ENTERPRICE</td>
-                                                            <td>100</td>
-                                                            <td>100</td>
-                                                            <td>100</td>
-                                                            <td>100</td>
-                                                            <td>100</td>
-                                                           
-
-                                                           
-                                                            
+                                                            <td>{{ forloop.counter }}</td>
+                                                            <th>{{obj.pro.pro_name }}</th>
+                                                            <td>{{obj.pro.MRP }}</td>
+                                                            <td>{{obj.salse_rate }}</td>
+                                                            <td>{{obj.purchase_rate }}</td>
+                                                            <td>{{obj.offer_rate }}</td>
+                                                            <td>{{obj.quantity }}</td>
+                                                            <td>{{obj.min_quantity }}</td>
+                                                            <td>{{obj.offer_qty }}</td>
                                                         </tr>
-                                                       
+                                                        {% endfor %}
                                                    
                                                     </tbody>
                                                 </table>

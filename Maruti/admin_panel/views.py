@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
-from django.contrib import messages
 from django.contrib.auth.models import User, auth
+from django.contrib import messages
 from .models import Products
 from .models import partyDetails
 from Purchase.models import Purchase_Details
@@ -48,7 +48,6 @@ def employeeDetail(request):
 
 def employeeAdd(request):
     return render(request,"employee_add.html")
-
 
 
 def productDetails(request):

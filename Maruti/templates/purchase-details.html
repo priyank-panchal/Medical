@@ -29,8 +29,6 @@
                                                         <th>NO.</th>
                                                         <th data-priority="7">BILL NO.</th>
                                                         <th data-priority="10">PARTY NAME</th>
-                                                        <th data-priority="10">CREDIT</th>
-                                                        <th data-priority="10">DEBIT</th>
                                                         <th data-priority="10">DATE</th>
                                                         <th data-priority="10">PRODUCT ADD</th>
                                                         <th data-priority="10">PRODUCT DETAIL</th>                                                        
@@ -44,13 +42,10 @@
                                                         <tr>
                                                             <td>{{ forloop.counter }}</td>
                                                             <th>{{ obj.Bill_no }}</th>
-                                                            <td>{{ obj.party }}</td>
-                                                            <td>{{ obj.credit }}</td>
-                                                            <td>{{ obj.debit }}</td>
+                                                            <td>{{ obj.party.party_name }}</td>
                                                             <td>{{ obj.date_pur }}</td>
-                                                            <td><a  href="{% url 'stock_add' obj.Pur_id %}" class="btn btn-success" >Add</a></td>
-                                                            <td><a href="{% url 'stock_master' %}" class = "btn btn-success">Details</a></td>
-                                                            
+                                                            <td><a href="{% url 'stock_add' obj.id  %}" class="btn btn-success" >Add</a></td>
+                                                            <td><a href="{% url 'stock_master' obj.id %}" class = "btn btn-success">Details</a></td>
                                                         </tr>
                                                     {% endfor %}
                                                      
