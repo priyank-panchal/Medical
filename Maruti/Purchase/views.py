@@ -27,7 +27,6 @@ def purchaseAdd(request):
         return render(request,"purchase-add.html",context)
 def stockMaster(request,id):
     ShowStock = Stock.objects.filter(pur=id)
-    print(ShowStock)
     context = {
         "stock_details":ShowStock
     }
