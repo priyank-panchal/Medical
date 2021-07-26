@@ -12,19 +12,20 @@
                             </div>
                         </div>
                         <!-- end page title -->
-                        
+
                         <div class="row" >
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                       
-                                        
+
+
                                         <button type="button" class="btn btn-success" style="margin-bottom: 20px;"><a href="{% url 'invoice_add' %}" style="color: white;"><i class="bx bx-add-to-queue"></i>&nbsp;&nbsp;Add</a></button>
-        
+
                                         <div class="table-rep-plugin">
                                             <div class="table-responsive mb-0" data-pattern="priority-columns">
                                                 <table id="tech-companies-1" class="table">
                                                     <thead>
+                                                    <tbody>
                                                     <tr>
                                                         <th>Sr No</th>
                                                         <th>Party Name.</th>
@@ -34,32 +35,33 @@
                                                         <th data-priority="10">INVOICE NO</th>
                                                         <th data-priority="10">ADD SALES</th>
                                                         <th data-priority="10">SALES DETAILS</th>
-
-                                                        
+                                                        <th>Details</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
-                                                 
+                                                    {% for obj in all_invoice %}
                                                     <tr>
-                                                        <td>1</td>
-                                                        <th>MSFT <span class="co-name">Microsoft Corporation</span></th>
-                                                        <td>Bapunagar Ahmedabad</td>
-                                                        <td>24AAAHDGSFSASDASASASAS21</td>
-                                                        <td>24AAAHDGSFSASDASASASAS21</td>
-                                                        <td>1</td>
-                                                        <td><a  href="{% url 'sales_add' %}" class="btn btn-success">Add</a></td>
-                                                        <td><a href="{% url 'sales_details' %}" class = "btn btn-success">Details</a></td>
-                                                       
-                                                        
+                                                        <td>{{ forloop.counter }}</td>
+                                                        <th><span class="co-name">{{ obj.party.party_name }}</span></th>
+                                                        <td>{{ obj.credit }}</td>
+                                                        <td>{{ obj.debit }}</td>
+                                                        <td>{{ obj.total }}</td>
+                                                        <td>{{ obj.invoice_number }}</td>
+                                                        <td>{{ obj.date_In }}</td>
+                                                        <td><a  href="{% url 'sales_add' obj.id %}" class="btn btn-success" >Add</a></td>
+                                                        <td><a href="{% url 'sales_details' obj.id %}" class = "btn btn-success">Details</a></td>
+
+
                                                     </tr>
-                                                   
-                                                   
+                                                    {% endfor %}
+
+
                                                     </tbody>
                                                 </table>
                                             </div>
-        
+
                                         </div>
-        
+
                                     </div>
                                 </div>
                             </div> <!-- end col -->

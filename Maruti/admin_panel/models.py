@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Products(models.Model):
     pro_id = models.AutoField(primary_key=True)
     pro_name = models.CharField(max_length=50,null=False)

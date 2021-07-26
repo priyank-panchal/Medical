@@ -1,5 +1,6 @@
 from django.db import models
 from admin_panel.models import Products,partyDetails
+
 # Create your models here.
 class Invoice_Details(models.Model):
     party = models.ForeignKey(partyDetails, on_delete=models.DO_NOTHING)

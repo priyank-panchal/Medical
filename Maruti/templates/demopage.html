@@ -1,0 +1,53 @@
+
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<div class="page-content" >
+    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Example</h4>
+                                        <form class="repeater" >
+                                            <div data-repeater-list="group-a">
+                                                <div data-repeater-item class="row">
+                                                    <div  class="mb-3 col-lg-2">
+                                                        <label class="form-label" for="name">Name</label>
+                                                        <input type="text" id="name" name="untyped-input" class="form-control"/>
+                                                    </div>
+                                                     <div  class="mb-3 col-lg-2">
+                                                        <label class="form-label" for="name">Name</label>
+                                                        <input type="hello" id="name1" name="untyped-input" class="form-control"/>
+                                                    </div>
+
+                                                    <div  class="mb-3 col-lg-2">
+                                                        <label class="form-label" for="email">Email</label>
+                                                        <input type="email" id="email" class="form-control"/>
+                                                    </div>
+
+                                                    <div  class="mb-3 col-lg-2">
+                                                        <label class="form-label" for="subject">Subject</label>
+                                                        <input type="text" id="subject" class="form-control"/>
+                                                    </div>
+                                                    <div class="mb-3 col-lg-2">
+                                                        <label class="form-label" for="message">Message</label>
+                                                        <textarea id="message" class="form-control"></textarea>
+                                                    </div>
+                                                    <div class="col-lg-2 align-self-center">
+                                                        <div class="d-grid">
+                                                            <input data-repeater-delete type="button" class="btn btn-primary" value="Delete"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <input data-repeater-create type="button" class="btn btn-success mt-3 mt-lg-0" value="Add" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    </div>
+</div>
+{%endblock content %}

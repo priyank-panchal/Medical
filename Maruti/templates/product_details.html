@@ -29,15 +29,22 @@
                                                         <th>Sr No</th>
                                                         <th>Product Name</th>
                                                         <th>MRP</th>
+                                                        <th>Total Qty</th>
+                                                        <th>Opeations</th>
                                                     </tr>
                                                     </thead>
 
-                                                    {% for Details in product_list %}
+                                                    {% for Details,sum_qty in product_list %}
                                                     <tbody>
                                                     <tr>
                                                         <td>{{ forloop.counter }}</td>
-                                                        <td>{{ Details.pro_name }}</td>
+                                                        <td>{{Details.pro_name }}</td>
                                                         <td>{{ Details.MRP }}</td>
+                                                        <td>{{ sum_qty.quantity__sum }}</td>
+                                                        <td><a href="#"> &nbsp;<i class="fas fa-trash-alt" title="Delete"></i></a>
+                                                        &nbsp;||&nbsp; <a href="{% url 'product_delete' Details.pro_id %}"> <i class="fas fa-edit" title="edit "></i></a>
+                                                        </td>
+                                                        </td>
                                                     </tr>
                                                         {% endfor %}
                                                     </tbody>
